@@ -9,7 +9,8 @@ export default {
       colors: {
         "dark": {
           900: '#111827',
-          700: '#242A38'
+          700: '#242A38',
+          500: '#2F3542'
         }
       },
       container: {

@@ -5,7 +5,7 @@ export default function App() {
 
 
   return (
-    <div className=''>
+    <div className=' bg-white dark:bg-dark-900 h-screen'>
       <Home />
     </div>
   )
