@@ -21,3 +21,9 @@
     src: url('../public/fonts/Morabba/woff2/Morabba-Medium.woff2');
   }
 }
+
+
+
+body {
+  background-color: #111827;
+}

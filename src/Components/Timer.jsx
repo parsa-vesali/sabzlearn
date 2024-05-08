@@ -41,7 +41,7 @@ export default function Timer() {
     }, [extended]); // Re-run the effect when the extended state changes
 
     return (
-        <div className='flex items-center justify-center gap-x-4 px-6 flex-row-reverse child:w-16 child:h-16 child:rounded-full child:flex'>
+        <div className='flex items-center justify-center  gap-x-4 px-6 flex-row-reverse child:w-16 child:h-16 child:rounded-full child:flex'>
             <span className='  text-zinc-900 bg-gray-100 items-center flex-col justify-center gap-y-0 '>
                 <p className='font-bold'>{days}</p>
                 <p>روز</p>
