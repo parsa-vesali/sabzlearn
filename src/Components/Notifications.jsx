@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import NotificationsActiveOutlinedIcon from '@mui/icons-material/NotificationsActiveOutlined';
 import WestIcon from '@mui/icons-material/West';
 import Timer from './Timer';
@@ -7,7 +7,7 @@ export default function Notifications() {
     return (
         <div className='bg-red-600 text-gray-100 rounded-lg  flex flex-col gap-y-4 pb-4 lg:py-0 lg:flex-row  items-center justify-between overflow-hidden'>
 
-            {/* RIGHT  */}
+            {/* RIGHT */}
             <div className="flex flex-col lg:flex-row  items-center justify-between gap-y-3 gap-x-4">
 
                 <span className=' py-4 lg:py-6 px-5 bg-white/45 rounded-b-full lg:rounded-b-none lg:rounded-bl-full lg:rounded-l-full '>
@@ -27,5 +27,5 @@ export default function Notifications() {
                 <Timer />
             </div>
         </div>
-    )
+    );
 }
