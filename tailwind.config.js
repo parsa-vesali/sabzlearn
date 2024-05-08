@@ -8,7 +8,8 @@ export default {
     extend: {
       colors: {
         "dark": {
-          900: '#111827'
+          900: '#111827',
+          700: '#242A38'
         }
       },
       container: {
