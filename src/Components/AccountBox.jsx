@@ -69,9 +69,11 @@ export default function AccountBox() {
 
             </div>
 
+
+            {/* OVERLAY */}
             {
                 isShowBox && (
-                    <div className='fixed w-full h-full top-0 left-0 bg-black/40 z-10 md:backdrop-blur transition-all show'></div>
+                    <div onClick={clickHanlder} className='fixed w-full h-full top-0 left-0 bg-black/40 z-10 md:backdrop-blur transition-all show'></div>
                 )
             }
         </>
