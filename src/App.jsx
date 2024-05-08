@@ -5,7 +5,7 @@ export default function App() {
 
 
   return (
-    <div className='transition-all bg-gray-100 dark:bg-dark-900 h-screen'>
+    <div className='transition-all bg-gray-100 dark:bg-dark-900 h-full '>
       <Home />
     </div>
   )
