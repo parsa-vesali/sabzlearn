@@ -23,7 +23,7 @@ export default function ChangeTheme() {
     }
     return (
         <>
-            <button onClick={handleSwith} className='bg-dark-500 text-gray-100 cursor-pointer p-3 rounded-full'>
+            <button onClick={handleSwith} className='dark:bg-dark-500 bg-gray-200  dark:text-gray-100 text-slate-500 cursor-pointer p-3 rounded-full'>
                 {
                     theme === 'dark' ? (
                         <LightModeOutlinedIcon style={{ fontSize: '1.6rem' }} />
