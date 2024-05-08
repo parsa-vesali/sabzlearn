@@ -1,6 +1,7 @@
 import React from 'react'
 import Notifications from '../Components/Notifications'
 import NavBar from '../Components/NavBar'
+import MainHeader from '../Components/MainHeader'
 
 export default function Home() {
     return (
@@ -9,6 +10,9 @@ export default function Home() {
                 <Notifications />
             </div>
             <NavBar />
+            <div className="container">
+                <MainHeader />
+            </div>
         </>
     )
 }
