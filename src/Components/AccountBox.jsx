@@ -27,9 +27,9 @@ export default function AccountBox() {
                     }
                 </button>
 
-                <div className={`absolute shadow-lg bg-white  dark:bg-dark-700 space-y-2 top-16 left-0  w-72 py-3 px-4 text-zinc-700 dark:text-gray-100 rounded-xl border-t-4 border-t-green-500 transition-all delay-75 ${isShowBox ? 'visible opacity-100' : 'invisible opacity-0'} child:transition-colors  flex items-start flex-col `}>
+                <div className={`absolute shadow-lg bg-white  dark:bg-dark-700 space-y-2 top-16 left-0  w-72 py-3 px-4 text-zinc-700  dark:text-gray-100 rounded-xl border-t-4 border-t-green-500 transition-all delay-75 ${isShowBox ? 'visible opacity-100' : 'invisible opacity-0'} child:transition-colors  flex items-start flex-col `}>
 
-                    <div className="w-full flex items-center justify-staer gap-x-4 border-b border-b-neutral-200 dark:border-b-white/5 pb-4 ">
+                    <div className="w-full flex items-center justify-staer gap-x-4 border-b border-b-neutral-200 dark:border-b-white/5 pb-4 child-hover:text-gray-100">
                         <div className="">
                             <img className='rounded-full w-16 h-16' src="./images/profile.png" alt="" />
                         </div>
@@ -39,7 +39,7 @@ export default function AccountBox() {
                         </div>
                     </div>
 
-                    <div className='flex w-full flex-col gap-y-1 child-hover:bg-green-600 text-lg child:transition-all border-b border-b-neutral-200 dark:border-b-white/5 pb-4'>
+                    <div className='flex w-full flex-col gap-y-1 child-hover:bg-green-600 text-lg child-hover:text-gray-100 child:transition-all border-b border-b-neutral-200 dark:border-b-white/5 pb-4'>
                         <a href="#" className='flex items-center gap-x-2 py-3 rounded-lg px-2'>
                             <HomeOutlinedIcon />
                             پیشخوان
@@ -58,7 +58,7 @@ export default function AccountBox() {
                         </a>
                     </div>
 
-                    <div className="flex w-full flex-col gap-y-1 child-hover:bg-red-600 text-lg child:transition-all">
+                    <div className="flex w-full flex-col gap-y-1 child-hover:bg-red-600  child-hover:text-gray-100 text-lg child:transition-all">
                         <a href="#" className='flex items-center gap-x-2 py-3 rounded-lg px-2 '>
                             <PowerSettingsNewOutlinedIcon />
                             خروج

@@ -20,7 +20,7 @@ export default {
           DEFAULT: '1rem',
           sm: '1rem',
           lg: '1rem',
-          xl: '2rem',
+          xl: '1rem',
           '2xl': '8rem',
         },
       },
