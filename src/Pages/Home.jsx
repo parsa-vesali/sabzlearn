@@ -3,6 +3,7 @@ import Notifications from '../Components/Notifications'
 import NavBar from '../Components/NavBar'
 import MainHeader from '../Components/MainHeader'
 import LastCurses from '../Components/LastCurses'
+import RoadMap from '../Components/RoadMap'
 
 export default function Home() {
     return (
@@ -14,6 +15,7 @@ export default function Home() {
             <div className="container">
                 <MainHeader />
                 <LastCurses />
+                <RoadMap />
             </div>
         </>
     )
