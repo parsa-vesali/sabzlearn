@@ -12,9 +12,9 @@ export default function Services() {
 
             <div className="grid grid-rows-2 md:grid-cols-2 gap-6 sm:gap-7">
 
-                <div className="flex items-center gap-x-10  bg-white dark:bg-dark-700 shadow-lg rounded-lg p-4">
-                    <span className=' relative px-7 py-12 bg-sky-500/30 rounded-full'>
-                        <AutoStoriesOutlinedIcon className=' absolute top-[30%]  -left-6 text-sky-500' style={{ fontSize: '3rem' }} />
+                <div className="flex flex-col lg:flex-row gap-y-6 justify-center text-center lg:text-right items-center gap-x-10  bg-white dark:bg-dark-700 shadow-lg rounded-lg p-4">
+                    <span className=' relative px-12 py-7 lg:px-7 lg:py-12 bg-sky-500/30 rounded-full'>
+                        <AutoStoriesOutlinedIcon className='absolute top-[50%] lg:top-[30%] left-[1.5rem] lg:-left-6 text-sky-500' style={{ fontSize: '3rem' }} />
                     </span>
                     <div className=" space-y-2">
                         <h2 className=' dark:text-gray-200 text-zinc-800 font-Dana-Bold text-xl'>تضمین کاملترین محتوا</h2>
@@ -23,9 +23,9 @@ export default function Services() {
                 </div>
 
 
-                <div className="flex items-center gap-x-10  bg-white dark:bg-dark-700 shadow-lg rounded-lg p-4">
-                    <span className=' relative px-7 py-12 bg-yellow-500/30 rounded-full'>
-                        <ModeCommentOutlinedIcon className=' absolute top-[30%]  -left-6 text-yellow-500' style={{ fontSize: '3rem' }} />
+                <div className="flex flex-col lg:flex-row gap-y-6 justify-center text-center lg:text-right items-center gap-x-10  bg-white dark:bg-dark-700 shadow-lg rounded-lg p-4">
+                    <span className=' relative px-12 py-7 lg:px-7 lg:py-12 bg-yellow-500/30 rounded-full'>
+                        <ModeCommentOutlinedIcon className='absolute top-[50%] lg:top-[30%] left-[1.5rem] lg:-left-6 text-yellow-500' style={{ fontSize: '3rem' }} />
                     </span>
                     <div className=" space-y-2">
                         <h2 className=' dark:text-gray-200 text-zinc-800 font-Dana-Bold text-xl'>پشتیبانی دائمی</h2>
@@ -33,10 +33,9 @@ export default function Services() {
                     </div>
                 </div>
 
-
-                <div className="flex items-center gap-x-10  bg-white dark:bg-dark-700 shadow-lg rounded-lg p-4">
-                    <span className=' relative px-7 py-12 bg-green-500/30 rounded-full'>
-                        <SignalCellularAltOutlinedIcon className=' absolute top-[30%]  -left-6 text-green-500' style={{ fontSize: '3rem' }} />
+                <div className="flex flex-col lg:flex-row gap-y-6 justify-center text-center lg:text-right items-center gap-x-10  bg-white dark:bg-dark-700 shadow-lg rounded-lg p-4">
+                    <span className=' relative px-12 py-7 lg:px-7 lg:py-12 bg-green-500/30 rounded-full'>
+                        <SignalCellularAltOutlinedIcon className='absolute top-[50%] lg:top-[30%] left-[1.5rem] lg:-left-6 text-green-500' style={{ fontSize: '3rem' }} />
                     </span>
                     <div className=" space-y-2">
                         <h2 className=' dark:text-gray-200 text-zinc-800 font-Dana-Bold text-xl'>پروژه محور در راستای بازار کار</h2>
@@ -44,15 +43,16 @@ export default function Services() {
                     </div>
                 </div>
 
-                <div className="flex items-center gap-x-10  bg-white dark:bg-dark-700 shadow-lg rounded-lg p-4">
-                    <span className=' relative px-7 py-12 bg-red-500/30 rounded-full'>
-                        <AutoStoriesOutlinedIcon className=' absolute top-[30%]  -left-6 text-red-500' style={{ fontSize: '3rem' }} />
+                <div className="flex flex-col lg:flex-row gap-y-6 justify-center text-center lg:text-right items-center gap-x-10  bg-white dark:bg-dark-700 shadow-lg rounded-lg p-4">
+                    <span className=' relative px-12 py-7 lg:px-7 lg:py-12 bg-red-500/30 rounded-full'>
+                        <AssignmentTurnedInOutlinedIcon className='absolute top-[50%] lg:top-[30%] left-[1.5rem] lg:-left-6 text-red-500' style={{ fontSize: '3rem' }} />
                     </span>
                     <div className=" space-y-2">
                         <h2 className=' dark:text-gray-200 text-zinc-800 font-Dana-Bold text-xl'>سراغ حرفه ای ها رفتیم</h2>
                         <p className='dark:text-gray-400 text-gray-600'>به جرعت میتونم بگم سخت گیرترین شرایط جذب مدرس داریم چون برامون مهمه محتوا خیلی ساده و روان بیان بشه که توی یادگیری به مشکل نخورید.</p>
                     </div>
                 </div>
+
 
             </div>
         </>
