@@ -118,7 +118,7 @@ export const Courses = [
         teacher: 'مهرشاد براتی',
         price: '1,300,000 ',
         student: 78,
-        img: './images/courses/.webp',
+        img: './images/courses/js-1.webp',
     },
     {
         id: 5,
