@@ -4,6 +4,7 @@ import NavBar from '../Components/NavBar'
 import MainHeader from '../Components/MainHeader'
 import LastCurses from '../Components/LastCurses'
 import RoadMap from '../Components/RoadMap'
+import Services from '../Components/Services'
 
 export default function Home() {
     return (
@@ -16,6 +17,7 @@ export default function Home() {
                 <MainHeader />
                 <LastCurses />
                 <RoadMap />
+                <Services />
             </div>
         </>
     )
