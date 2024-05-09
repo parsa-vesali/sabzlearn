@@ -10,7 +10,7 @@ export default function LastCurses() {
     const [allCourses, setAllCourses] = useState(Courses)
     const RandomCourses = () => {
         const shuffled = allCourses.sort(() => 0.5 - Math.random());
-        return shuffled.slice(0, 12);
+        return shuffled.slice(0, 8);
     }
     return (
         <>
@@ -21,23 +21,28 @@ export default function LastCurses() {
                     <KeyboardBackspaceOutlinedIcon />
                 </button>
             </Title>
-            <div className='grid grid-cols-1 sm:grid-cols-3  lg:grid-cols-4 gap-3.5 md:gap-5'>
+            <div className='grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-3.5 md:gap-5 justify-items-center'>
 
                 {
                     RandomCourses().map(course => (
-                        <div className=" w-[300px]  overflow-hidden rounded-lg bg-white dark:bg-dark-700  dark:text-gray-100 text-zinc-900 flex flex-col gap-y-1 shadow ">
+                        <div key={course.id} className=" w-[340px] sm:w-[290px]  overflow-hidden rounded-xl bg-white dark:bg-dark-700  dark:text-gray-100 text-zinc-900 flex flex-col  shadow-lg ">
                             {/* COURSE BANNER  */}
-                            <div className="h-42 relative rounded-lg overflow-hidden">
+                            <div className="h-42 relative rounded-xl overflow-hidden">
                                 <img className='w-full h-full' src={course.img} alt="course" />
+                                {
+                                    course.price === 'رایگان!' ? (
+                                        <span className=' absolute top-3 right-3 rounded-full bg-green-600 text-sm flex items-center justify-center py-1 px-3.5'>100%</span>
+                                    ) : ''
+                                }
                             </div>
 
-                            <div className="pt-2 px-4">
+                            <div className="pt-3 px-4">
                                 {/* COURSE TITLE  */}
-                                <div className=" flex flex-col space-y-4  pb-4 border-b border-b-neutral-200 dark:border-b-white/5">
-                                    <h2 className='text-lg font-Dana-Bold cursor-pointer h-14'>{course.title}</h2>
-                                    <p className='text-gray-400 line-clamp-2'>{course.subtitle}</p>
+                                <div className=" flex flex-col space-y-4  pb-2 border-b border-b-neutral-200 dark:border-b-white/5">
+                                    <h2 className='text-lg font-Dana-Bold cursor-pointer h-14 line-clamp-2'>{course.title}</h2>
+                                    <p className='text-gray-400 line-clamp-2 text-sm'>{course.subtitle}</p>
                                     <div className="flex items-center justify-between">
-                                        <span className='text-gray-200'>
+                                        <span className=' text-gray-400 dark:text-gray-200 text-sm'>
                                             <PersonIcon />
                                             {course.teacher}
                                         </span>
@@ -49,13 +54,15 @@ export default function LastCurses() {
                                 </div>
                                 {/* COURSE FOOTER  */}
                                 <div className="py-2 flex items-center justify-between">
-                                    <span className='flex items-center  gap-x-1 text-sm'>
+                                    <span className='flex items-center  gap-x-1 text-sm  text-gray-500 dark:text-gray-100 '>
                                         <PeopleIcon style={{ fontSize: '1.3rem' }} />
                                         {course.student}
                                     </span>
                                     <span className='text-green-500 flex items-center gap-x-1'>
                                         <p className='text-lg font-Dana-Bold'>{course.price}</p>
-                                        <p className='text-xs'>تومان</p>
+                                        {
+                                            course.price === 'رایگان!' ? '' : 'تومان'
+                                        }
                                     </span>
                                 </div>
                             </div>
