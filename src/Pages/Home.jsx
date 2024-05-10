@@ -5,6 +5,7 @@ import MainHeader from '../Components/MainHeader'
 import LastCurses from '../Components/LastCurses'
 import RoadMap from '../Components/RoadMap'
 import Services from '../Components/Services'
+import NewCurses from '../Components/NewCurses'
 
 export default function Home() {
     return (
@@ -18,6 +19,7 @@ export default function Home() {
                 <LastCurses />
                 <RoadMap />
                 <Services />
+                <NewCurses />
             </div>
         </>
     )

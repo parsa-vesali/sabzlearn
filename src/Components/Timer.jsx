@@ -8,7 +8,7 @@ export default function Timer() {
     const [extended, setExtended] = useState(false);
 
     useEffect(() => {
-        let countdownDate = new Date('2024-05-10T00:00:00').getTime();
+        let countdownDate = new Date('2024-06-10T00:00:00').getTime();
 
         if (extended) {
             // If extended, set the countdown for the next 10 days
@@ -20,20 +20,25 @@ export default function Timer() {
             const now = new Date().getTime();
             const distance = countdownDate - now;
 
-            const daysRemaining = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hoursRemaining = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutesRemaining = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const secondsRemaining = Math.floor((distance % (1000 * 60)) / 1000);
-
-            setDays(daysRemaining);
-            setHours(hoursRemaining);
-            setMinutes(minutesRemaining);
-            setSeconds(secondsRemaining);
-
-            if (distance < 0) {
+            if (distance <= 0) {
                 clearInterval(interval);
                 // If the countdown is finished, set the extended state to true
                 setExtended(true);
+                // Set the timer values to 0 when the countdown is finished
+                setDays(0);
+                setHours(0);
+                setMinutes(0);
+                setSeconds(0);
+            } else {
+                const daysRemaining = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hoursRemaining = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutesRemaining = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const secondsRemaining = Math.floor((distance % (1000 * 60)) / 1000);
+
+                setDays(daysRemaining);
+                setHours(hoursRemaining);
+                setMinutes(minutesRemaining);
+                setSeconds(secondsRemaining);
             }
         }, 1000);
 

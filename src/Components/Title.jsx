@@ -1,7 +1,7 @@
 import React from 'react'
 export default function Title({ title, subtitle, color, children }) {
     return (
-        <div className='flex items-center justify-between mt-20 mb-12'>
+        <div className='flex items-center justify-between mt-36 mb-12'>
             <div className="flex flex-col gap-y-1 lg:gap-y-4">
                 <h2 className=' text-xl lg:text-3xl font-Dana-Bold dark:text-gray-100 flex items-center gap-x-2'>
                     <span className={`p-2 rounded-sm ${color} hidden lg:flex `} ></span> {title}
