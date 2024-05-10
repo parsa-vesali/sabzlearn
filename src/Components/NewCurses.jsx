@@ -21,17 +21,34 @@ export default function NewCurses() {
         <>
             <Title title='جدیدترین دوره ها' subtitle='یادگیری و رشد توسعه فردی' color='bg-green-500' />
 
-            <div className=" rounded-xl overflow-hidden">
+            <div className=" rounded-xl overflow-hidden ">
                 <Swiper
-                    slidesPerView={4}
+                    slidesPerView={1}
                     loop={true}
                     spaceBetween={30}
                     autoplay={{
                         delay: 2000,
                         disableOnInteraction: false,
                     }}
-                    className="mySwiper"
+                    className="mySwiper flex justify-center items-center justify-items-center"
                     modules={[Autoplay]}
+                    breakpoints={{
+                        640: {
+                            slidesPerView: 2,
+                        },
+                        768: {
+                            slidesPerView: 2,
+                        },
+                        1024: {
+                            slidesPerView: 4,
+                        },
+                        1280: {
+                            slidesPerView: 4,
+                        },
+                        1536: {
+                            slidesPerView: 4,
+                        },
+                    }}
                 >
                     {
                         RandomCourses().map(course => (
