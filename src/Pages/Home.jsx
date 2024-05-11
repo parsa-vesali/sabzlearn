@@ -8,6 +8,7 @@ import Services from '../Components/Services'
 import NewCurses from '../Components/NewCurses'
 import Articles from '../Components/Articles'
 import PupularCurses from '../Components/PupularCurses'
+import Footer from '../Components/Footer'
 
 export default function Home() {
     return (
@@ -25,6 +26,7 @@ export default function Home() {
                 <Articles />
                 <PupularCurses />
             </div>
+            <Footer />
         </>
     )
 }
