@@ -20,5 +20,6 @@ I made this project with `React js` and used `tailwind` next to it
 
 ## 💻 preview :
 
-
+![image](https://github.com/parsa-vesali/sabzlearn/blob/main/d-1.png)
+![image](https://github.com/parsa-vesali/sabzlearn/blob/main/d-2.png)
 
