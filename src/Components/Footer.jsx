@@ -1,7 +1,7 @@
 import React from 'react'
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TelegramIcon from '@mui/icons-material/Telegram';
-import XIcon from '@mui/icons-material/X';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 export default function Footer() {
     return (
@@ -45,8 +45,8 @@ export default function Footer() {
             </div>
 
             <div className=" flex flex-col lg:flex-row space-y-4 items-center justify-between pt-4 border-t border-t-neutral-200 dark:border-t-white/10 mt-7 text-lg">
-                <h2 className=''>ساخته شده با ❤️ در سبزلرن</h2>
-                <h2 className='lg:font-Dana-Bold'>کلیه حقوق مادی و معنوی سایت برای سبز لرن محفوظ است.</h2>
+                <h2 className=''>ساخته شده با ❤️ توسط پارسا </h2>
+                <a href='https://github.com/parsa-vesali' className='lg:font-Dana-Bold'>parsa-vesali <GitHubIcon /></a>
             </div>
         </div>
     )
