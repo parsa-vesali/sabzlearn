@@ -22,7 +22,6 @@ export default function LastCurses() {
                 </button>
             </Title>
             <div className='grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-3.5 md:gap-5 justify-items-center'>
-
                 {
                     RandomCourses().map(course => (
                         <div key={course.id} className=" w-[340px] sm:w-[290px]  overflow-hidden rounded-xl bg-white dark:bg-dark-700  dark:text-gray-100 text-zinc-900 flex flex-col  shadow-lg ">
@@ -69,8 +68,6 @@ export default function LastCurses() {
                         </div>
                     ))
                 }
-
-
             </div>
         </>
     )
