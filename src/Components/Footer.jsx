@@ -44,7 +44,7 @@ export default function Footer() {
                 </ul>
             </div>
 
-            <div className=" flex flex-col lg:flex-row space-y-4 items-center justify-between pt-4 border-t border-t-neutral-200 dark:border-t-white/10 mt-7 text-lg">
+            <div className="flex flex-col lg:flex-row space-y-4 items-center justify-between pt-4 border-t border-t-neutral-200 dark:border-t-white/10 mt-7 text-lg">
                 <h2 className=''>ساخته شده با ❤️ توسط پارسا </h2>
                 <a href='https://github.com/parsa-vesali' className='lg:font-Dana-Bold'>parsa-vesali <GitHubIcon /></a>
             </div>

@@ -5,6 +5,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import PeopleIcon from '@mui/icons-material/People';
 import StarIcon from '@mui/icons-material/Star';
 import { Courses } from '../Constant/index'
+import { Link } from 'react-router-dom';
 export default function LastCurses() {
 
     const [allCourses, setAllCourses] = useState(Courses)
@@ -38,7 +39,7 @@ export default function LastCurses() {
                             <div className="pt-3 px-4">
                                 {/* COURSE TITLE  */}
                                 <div className=" flex flex-col space-y-4  pb-2 border-b border-b-neutral-200 dark:border-b-white/5">
-                                    <h2 className='text-lg font-Dana-Bold cursor-pointer h-14 line-clamp-2'>{course.title}</h2>
+                                    <Link to='/main-course' className='text-lg font-Dana-Bold cursor-pointer h-14 line-clamp-2'>{course.title}</Link>
                                     <p className='text-gray-400 line-clamp-2 text-sm'>{course.subtitle}</p>
                                     <div className="flex items-center justify-between">
                                         <span className=' text-gray-400 dark:text-gray-200 text-sm'>
