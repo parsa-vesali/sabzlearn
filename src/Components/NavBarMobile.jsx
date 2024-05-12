@@ -45,9 +45,6 @@ export default function NavBarMobile() {
                     {/* SEARCH BAR */}
                     <div className="relative bg-gray-200 dark:bg-dark-500 py-4 px-3 text-sm my-4  rounded-full overflow-hidden text-slate-500  dark:text-gray-100 ">
                         <input type="text" className='bg-transparent outline-none border-none' placeholder='چیو میخوای یاد بگیری ؟' />
-                        <span className=' cursor-pointer '>
-                            <SearchOutlinedIcon style={{ fontSize: '1.3rem' }} />
-                        </span>
                     </div>
                     {/* MENU */}
                     <ul className='px-2 py-4 space-y-4 text-zinc-800 dark:text-white'>

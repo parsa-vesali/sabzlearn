@@ -12,18 +12,32 @@ export default function MainCourse() {
             <div className='container py-8 bg-gray-100 dark:bg-dark-900 text-zinc-600 dark:text-gray-100'>
                 <Notifications />
             </div>
+
+
             <NavBar />
+
+
             <div className="container dark:bg-dark-900 text-zinc-600 dark:text-gray-100">
                 <Breadcrumb route1='دوره ها' route2='بک اند' route3='آموزش پروژه محور فریمورک Fastify' />
-                {/* title and demo  */}
-                <div className="">
-                    <div className="">
-                        <h2>آموزش پروژه محور فریمورک Fastify</h2>
-                        <p>Fastify یه فریمورک وب سریع و کم‌ حجم برای ساخت برنامه‌های تحت وب با Node.js هست.Fastify یکی از فریم‌ورک‌های جدید در صنعت توسعه وب هست که با ویژگی‌های قدرتمندش تونسته محوبیت خوبی رو بدست بیاره!</p>
 
-                        <Button title='ثبت نام در دوره' icon={<SchoolOutlinedIcon />}></Button>
+                {/* title and demo  */}
+                <div className="flex items-start flex-col-reverse lg:flex-row justify-between mt-14 lg:gap-x-5 lg:h-[350px] bg-dark-700 lg:bg-transparent p-1 lg:p-0 rounded-lg">
+
+                    <div className="flex flex-col justify-between h-full ">
+                        <div className="">
+                            <h2 className='text-[1.625rem] font-Dana-Bold mb-4'>آموزش پروژه محور NestJS از صفر!</h2>
+                            <p className=' text-lg line-clamp-4'>NestJS یه فریم‌ورک توسعه سمت سرور وب با TypeScript برای ساخت برنامه‌های مبتنی بر Node.js هست. نست بر پایه الگوی معماری ماژولار پیاده سازی شده و میتونیم باهاش برنامه‌هایی با خوانایی بسیار بالا بسازیمz</p>
+                        </div>
+
+
+                        <div className="flex flex-col mt-4 lg:mt-0 lg:flex-row justify-between items-center">
+                            <Button title='ثبت نام در دوره' icon={<SchoolOutlinedIcon />} />
+                            <p className=' text-2xl font-bold'>1,600,000 <span className=' text-base'>تومان</span></p>
+                        </div>
                     </div>
-                    <div className=""></div>
+
+
+                    <video src="" controls poster='./images/courses/git.webp' className='h-[345px] rounded-xl'></video>
                 </div>
             </div>
         </>
