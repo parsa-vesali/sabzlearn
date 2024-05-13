@@ -22,6 +22,8 @@ import ForumIcon from '@mui/icons-material/Forum';
 import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
 import CourseInfoBox from '../Components/CourseInfoBox';
 
+import ProgressBar from 'react-bootstrap/ProgressBar';
+
 export default function MainCourse() {
     return (
         <>
@@ -95,7 +97,45 @@ export default function MainCourse() {
 
 
                     {/* Data Left */}
-                    <div className=""></div>
+                    <div className="col-span-12 lg:col-span-4 space-y-8">
+                        <div className=" bg-white dark:bg-dark-700 rounded-xl p-4.5 sm:p-5">
+                            <div className="flex gap-x-4">
+                                <div className="flex flex-col sm:flex-row items-center text-center md:text-right gap-y-1 gap-x-3 flex-grow pt-3.5 pb-3 sm:px-3.5 sm:py-2.5 bg-gray-100 dark:bg-dark-500 rounded-xl">
+                                    <span className=' text-green-500'>
+                                        <GroupIcon style={{ fontSize: '2.7rem' }} />
+                                    </span>
+                                    <div className="font-Dana-Bold">
+                                        <h2 className=' text-lg  '>2090</h2>
+                                        <p className=' text-sm text-gray-400'>دانشجو</p>
+                                    </div>
+                                </div>
+                                <div className="flex flex-col sm:flex-row items-center text-center md:text-right gap-y-1 gap-x-3 flex-grow pt-3.5 pb-3 sm:px-3.5 sm:py-2.5 bg-gray-100 dark:bg-dark-500 rounded-xl">
+                                    <span className=' text-yellow-500'>
+                                        <StarIcon style={{ fontSize: '2.7rem' }} />
+                                    </span>
+                                    <div className="font-Dana-Bold">
+                                        <h2 className=' text-lg  '>5.0</h2>
+                                        <p className=' text-sm text-gray-400'>رضایت</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="flex items-center justify-between mt-5 child:font-Dana-Bold">
+                                <p>درصد تکمیل دوره</p>
+                                <p>54%</p>
+                            </div>
+
+                            <div className=" relative z-10 mt-2 w-full py-1.5  rounded-xl bg-green-500/20 overflow-hidden">
+                                <span className=' absolute top-0 bottom-0 left-0 z-20 w-[54%] bg-green-500 rounded-xl'></span>
+                            </div>
+                        </div>
+                        <div className="bg-white dark:bg-dark-700 rounded-xl p-4.5 sm:p-5 flex flex-col items-center gap-y-4 justify-center">
+                            <img className=' w-22 h-22 rounded-full border-2 border-white' src="./images/profile.png" alt="teacher" />
+                            <p className=' text-lg font-Dana-Bold'>
+                                رضا دولتی | مدرس دوره
+                            </p>
+                            <Button title='مشاهده پروفایل من' />
+                        </div>
+                    </div>
                 </div>
 
             </div>
