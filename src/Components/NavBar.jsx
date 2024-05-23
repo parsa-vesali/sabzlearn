@@ -5,6 +5,7 @@ import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import ChangeTheme from './ChangeTheme';
 import AccountBox from './AccountBox';
 import NavBarMobile from './NavBarMobile';
+import { Link } from 'react-router-dom';
 
 export default function NavBar() {
 
@@ -17,9 +18,9 @@ export default function NavBar() {
                     {/* menu and logo */}
                     <div className="flex items-center justify-center gap-x-8">
                         {/* LOGO */}
-                        <a href="#">
-                            <img src="./images/logo.webp" className='h-12' alt="logo" />
-                        </a>
+                        <Link to={'/'}>
+                            <img src="../../images/logo.webp" className='h-12' alt="logo" />
+                        </Link>
 
                         {/* MENU */}
                         <ul className='text-base xl:text-lg child:dark:text-gray-100 child-hover:text-green-500 child:transition-all flex items-center justify-center gap-x-2 xl:gap-x-4'>

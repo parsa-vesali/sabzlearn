@@ -33,7 +33,7 @@ export default function NavBarMobile() {
                     <div className="flex items-center justify-between  border-b border-b-neutral-200 dark:border-b-white/5 pb-4">
                         {/* LOGO */}
                         <a href="#">
-                            <img src="./images/logo.webp" className='h-12' alt="logo" />
+                            <img src="../../images/logo.webp" className='h-12' alt="logo" />
                         </a>
                         <div className="flex items-center gap-x-2">
                             <ChangeTheme />
@@ -72,7 +72,7 @@ export default function NavBarMobile() {
                 <div >
                     {/* LOGO */}
                     <a href="#">
-                        <img src="./images/logo.webp" className='h-12' alt="logo" />
+                        <img src="../../images/logo.webp" className='h-12' alt="logo" />
                     </a>
                 </div>
                 <div >

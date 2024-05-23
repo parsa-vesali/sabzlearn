@@ -14,7 +14,7 @@ export default function Accordion() {
 
 
     return (
-        <div className='relative shadow-lg rounded-lg cursor-pointer overflow-hidden transition-all ' >
+        <div className='relative shadow-lg rounded-lg cursor-pointer overflow-hidden transition-all mt-4 ' >
             {/* Accordion title */}
             <div onClick={showAccordion} className={`flex items-center justify-between  transition-colors ${isShowAccordion ? 'bg-green-500' : 'dark:bg-dark-500 '} px-5 py-4 `} >
                 <h2>معرفی دوره</h2>
@@ -32,7 +32,7 @@ export default function Accordion() {
                 <div className="flex items-center justify-between px-5 py-4 border-b border-gray-100/10">
                     <div className="flex items-center gap-x-2">
                         <span className='w-8 h-8 bg-dark-300 flex items-center justify-center rounded-md'>1</span>
-                        <h1>معرفی فصل - نحوه توسعه پروژه</h1>
+                        <h1 className="line-clamp-1">معرفی فصل - نحوه توسعه پروژه</h1>
                     </div>
                     <div className="flex items-center gap-x-2">
                         <p>12:12</p>
@@ -44,7 +44,7 @@ export default function Accordion() {
                 <div className="flex items-center justify-between px-5 py-4">
                     <div className="flex items-center gap-x-2">
                         <span className='w-8 h-8 bg-dark-300 flex items-center justify-center rounded-md'>2</span>
-                        <h1>چه فیچر های جدیدی رو تو پروژه دیوار یاد می‌گیریم</h1>
+                        <h1 className="line-clamp-1">چه فیچر های جدیدی رو تو پروژه دیوار یاد می‌گیریم</h1>
                     </div>
                     <div className="flex items-center gap-x-2">
                         <p>12:12</p>

@@ -28,7 +28,7 @@ export default function LastCurses() {
                         <div key={course.id} className=" w-[340px] sm:w-[290px]  overflow-hidden rounded-xl bg-white dark:bg-dark-700  dark:text-gray-100 text-zinc-900 flex flex-col  shadow-lg ">
                             {/* COURSE BANNER  */}
                             <div className="h-42 relative rounded-xl overflow-hidden">
-                                <img className='w-full h-full' src={course.img} alt="course" />
+                                <Link to={`/main-course/${course.id}`}> <img className='w-full h-full' src={course.img} alt="course" /></Link>
                                 {
                                     course.price === 'رایگان!' ? (
                                         <span className=' absolute top-3 right-3 rounded-full bg-green-600 text-sm flex items-center justify-center py-1 px-3.5'>100%</span>
@@ -39,7 +39,7 @@ export default function LastCurses() {
                             <div className="pt-3 px-4">
                                 {/* COURSE TITLE  */}
                                 <div className=" flex flex-col space-y-4  pb-2 border-b border-b-neutral-200 dark:border-b-white/5">
-                                    <Link to='/main-course' className='text-lg font-Dana-Bold cursor-pointer h-14 line-clamp-2'>{course.title}</Link>
+                                    <Link to={`/main-course/${course.id}`} className='text-lg font-Dana-Bold cursor-pointer h-14 line-clamp-2'>{course.title}</Link>
                                     <p className='text-gray-400 line-clamp-2 text-sm'>{course.subtitle}</p>
                                     <div className="flex items-center justify-between">
                                         <span className=' text-gray-400 dark:text-gray-200 text-sm'>

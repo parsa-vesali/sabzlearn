@@ -28,7 +28,7 @@ export default function AccountBox() {
                 <div className={`absolute shadow-lg bg-white dark:bg-dark-700 space-y-2 top-16 left-0 w-72 py-3 px-4 text-zinc-700 dark:text-gray-100 rounded-xl border-t-4 border-t-green-500 transition-all delay-75 ${isShowBox ? 'visible opacity-100' : 'invisible opacity-0'} child:transition-colors flex items-start flex-col`}>
                     <div className="w-full flex items-center justify-start gap-x-4 border-b border-b-neutral-200 dark:border-b-white/5 pb-4 child-hover:text-gray-100">
                         <div className="">
-                            <img className='rounded-full w-16 h-16' src="./images/profile.png" alt="" />
+                            <img className='rounded-full w-16 h-16' src="../../images/profile.png" alt="" />
                         </div>
                         <div className="space-y-2">
                             <p className='text-lg font-Dana-Bold'>پارسا وصالی</p>

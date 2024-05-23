@@ -1,4 +1,6 @@
 import React from 'react'
+import { Courses } from '../Constant';
+import { useParams } from 'react-router-dom';
 import Notifications from '../Components/Notifications'
 import NavBar from '../Components/NavBar'
 import Footer from '../Components/Footer'
@@ -25,6 +27,8 @@ import Accordion from '../Components/Accordion';
 
 
 export default function MainCourse() {
+    let params = useParams();
+    let mainCourseData = Courses.find(course => course.id == params.CourseID)
     return (
         <>
             <div className='container py-8 bg-gray-100 dark:bg-dark-900 text-zinc-900 dark:text-gray-100'>
@@ -36,25 +40,25 @@ export default function MainCourse() {
 
 
             <div className="container dark:bg-dark-900 text-zinc-900 dark:text-gray-100">
-                <Breadcrumb route1='دوره ها' route2='بک اند' route3='آموزش پروژه محور فریمورک Fastify' />
+                <Breadcrumb route1='دوره ها' route2='بک اند' route3={`${mainCourseData.title}`} />
 
                 {/* title and demo  */}
-                <div className="flex items-start flex-col-reverse lg:flex-row justify-between mt-14 lg:gap-x-5 lg:h-[350px] bg-dark-700 lg:bg-transparent p-1 lg:p-0 rounded-lg">
+                <div className="flex items-start flex-col-reverse gap-y-4   lg:flex-row justify-between mt-5 lg:mt-14 lg:gap-x-5 lg:h-[350px] bg-dark-700 lg:bg-transparent py-4 p-2 lg:p-0 rounded-lg">
 
                     <div className="flex flex-col justify-between h-full ">
                         <div className="">
-                            <h2 className='text-[1.625rem] font-Dana-Bold mb-4'>آموزش پروژه محور NestJS از صفر!</h2>
-                            <p className=' text-lg line-clamp-4'>NestJS یه فریم‌ورک توسعه سمت سرور وب با TypeScript برای ساخت برنامه‌های مبتنی بر Node.js هست. نست بر پایه الگوی معماری ماژولار پیاده سازی شده و میتونیم باهاش برنامه‌هایی با خوانایی بسیار بالا بسازیم</p>
+                            <h2 className='text-lg lg:text-[1.625rem] font-Dana-Bold mb-4'>{mainCourseData.title}</h2>
+                            <p className=' text-base lg:text-lg line-clamp-4'>{mainCourseData.subtitle}</p>
                         </div>
 
-                        <div className="flex flex-col mt-4 lg:mt-0 lg:flex-row justify-between items-center">
+                        <div className="flex flex-col gap-y-4 mt-4 lg:mt-0 lg:flex-row justify-between items-center">
                             <Button title='ثبت نام در دوره' icon={<SchoolOutlinedIcon />} />
-                            <p className=' text-2xl font-bold'>1,600,000 <span className=' text-base'>تومان</span></p>
+                            <p className=' text-xl lg:text-2xl font-bold'>{mainCourseData.price}<span className=' text-base'>{mainCourseData.price === 'رایگان!' ? '' : 'تومان'}</span></p>
                         </div>
                     </div>
 
 
-                    <video src="" controls poster='./images/courses/git.webp' className='h-[345px] rounded-xl'></video>
+                    <video src="" controls poster={`../../${mainCourseData.img}`} className='lg:h-[345px] rounded-xl'></video>
                 </div>
 
 
@@ -89,9 +93,9 @@ export default function MainCourse() {
 
                         </div>
                         {/* Course description */}
-                        <div className="bg-white dark:bg-dark-700 rounded-xl p-4.5 sm:p-5 mt-8">
-                            <div className="flex items-center gap-x-2 mb-5 sm:mb-6 relative">
-                                <h2 className=' font-Dana-Bold text-2xl flex items-center gap-x-2'>
+                        <div className="bg-white dark:bg-dark-700 rounded-xl py-4 p-4 sm:p-5 mt-8">
+                            <div className="flex items-center gap-x-2 mb-1 lg:mb-5 sm:mb-6 relative">
+                                <h2 className=' font-Dana-Bold text-xl lg:text-2xl flex items-center gap-x-2'>
                                     <DescriptionIcon className=' text-amber-400' style={{ fontSize: '2rem' }} />
                                     توضیحات
                                 </h2>
@@ -121,7 +125,7 @@ export default function MainCourse() {
 
                         </div>
                         {/* Course headLines */}
-                        <div className="bg-white dark:bg-dark-700 rounded-xl p-4.5 sm:p-5 mt-8">
+                        <div className="bg-white dark:bg-dark-700 rounded-xl p-4 sm:p-5 mt-8">
                             <div className="flex items-center gap-x-2 mb-5 sm:mb-6 relative">
                                 <h2 className=' font-Dana-Bold text-2xl flex items-center gap-x-2'>
                                     <DescriptionIcon className=' text-sky-500' style={{ fontSize: '2rem' }} />
@@ -130,10 +134,11 @@ export default function MainCourse() {
                                 <span className="absolute -right-6 sm:-right-[26px] block w-1.5 h-[34px] md:h-9.5 bg-sky-500 rounded-r-sm "></span>
                             </div>
                             <Accordion />
+                            <Accordion />
                         </div>
 
                         {/* Course comments */}
-                        <div className="bg-white dark:bg-dark-700 rounded-xl p-4.5 sm:p-5 mt-8">
+                        <div className="bg-white dark:bg-dark-700 rounded-xl p-4 sm:p-5 mt-8">
                             <div className="flex items-center gap-x-2 mb-5 sm:mb-6 relative">
                                 <h2 className=' font-Dana-Bold text-2xl flex items-center gap-x-2'>
                                     <DescriptionIcon className=' text-red-500' style={{ fontSize: '2rem' }} />
@@ -150,14 +155,14 @@ export default function MainCourse() {
                     {/* Data Left */}
                     <div className="col-span-12 lg:col-span-4 space-y-8">
                         {/* STUDENT AND PROGRES BAR */}
-                        <div className=" bg-white dark:bg-dark-700 rounded-xl p-4.5 sm:p-5">
+                        <div className=" bg-white dark:bg-dark-700 rounded-xl p-4 sm:p-5">
                             <div className="flex gap-x-4">
                                 <div className="flex flex-col sm:flex-row items-center text-center md:text-right gap-y-1 gap-x-3 flex-grow pt-3.5 pb-3 sm:px-3.5 sm:py-2.5 bg-gray-100 dark:bg-dark-500 rounded-xl">
                                     <span className=' text-green-500'>
                                         <GroupIcon style={{ fontSize: '2.7rem' }} />
                                     </span>
                                     <div className="font-Dana-Bold">
-                                        <h2 className=' text-lg  '>2090</h2>
+                                        <h2 className=' text-lg  '>{mainCourseData.student}</h2>
                                         <p className=' text-sm text-gray-400'>دانشجو</p>
                                     </div>
                                 </div>
@@ -181,15 +186,15 @@ export default function MainCourse() {
                             </div>
                         </div>
                         {/* COURSE TEACHER  */}
-                        <div className="bg-white dark:bg-dark-700 rounded-xl p-4.5 sm:p-5 flex flex-col items-center gap-y-4 justify-center">
-                            <img className=' w-22 h-22 rounded-full border-2 border-white' src="./images/profile.png" alt="teacher" />
+                        <div className="bg-white dark:bg-dark-700 rounded-xl p-4 sm:p-5 flex flex-col items-center gap-y-4 justify-center">
+                            <img className=' w-22 h-22 rounded-full border-2 border-white' src="../../images/profile.png" alt="teacher" />
                             <p className=' text-lg font-Dana-Bold'>
-                                رضا دولتی | مدرس دوره
+                                {mainCourseData.teacher} | مدرس دوره
                             </p>
                             <Button title='مشاهده پروفایل من' />
                         </div>
                         {/* LINK PROJECT */}
-                        <div className="bg-white dark:bg-dark-700 rounded-xl p-4.5 sm:p-5 flex flex-col items-center gap-y-4 justify-center">
+                        <div className="bg-white dark:bg-dark-700 rounded-xl p-4 sm:p-5 flex flex-col items-center gap-y-4 justify-center">
                             <p className='text-lg font-Dana-Bold'>
                                 لینک کوتاه آموزش
                             </p>
