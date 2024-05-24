@@ -14,9 +14,9 @@ export default function Accordion() {
 
 
     return (
-        <div className='relative shadow-lg rounded-lg cursor-pointer overflow-hidden transition-all mt-4 ' >
+        <div className='relative  rounded-lg cursor-pointer overflow-hidden transition-all mt-4 ' >
             {/* Accordion title */}
-            <div onClick={showAccordion} className={`flex items-center justify-between  transition-colors ${isShowAccordion ? 'bg-green-500' : 'dark:bg-dark-500 '} px-5 py-4 `} >
+            <div onClick={showAccordion} className={`flex items-center justify-between  transition-colors ${isShowAccordion ? 'bg-green-500' : ' bg-gray-100 dark:bg-dark-500 '} px-5 py-4 `} >
                 <h2>معرفی دوره</h2>
                 <div className="flex items-center gap-x-2">
                     <p>1جلسه</p>
@@ -28,10 +28,10 @@ export default function Accordion() {
             </div>
 
             {/* Accordion body */}
-            <div className={`${isShowAccordion ? 'flex' : 'hidden'} flex-col  dark:bg-dark-500 `}>
+            <div className={`${isShowAccordion ? 'flex' : 'hidden'} flex-col   dark:bg-dark-500 `}>
                 <div className="flex items-center justify-between px-5 py-4 border-b border-gray-100/10">
                     <div className="flex items-center gap-x-2">
-                        <span className='w-8 h-8 bg-dark-300 flex items-center justify-center rounded-md'>1</span>
+                        <span className='w-8 h-8 bg-gray-300 dark:bg-dark-300 flex items-center justify-center rounded-md'>1</span>
                         <h1 className="line-clamp-1">معرفی فصل - نحوه توسعه پروژه</h1>
                     </div>
                     <div className="flex items-center gap-x-2">
@@ -43,7 +43,7 @@ export default function Accordion() {
                 </div>
                 <div className="flex items-center justify-between px-5 py-4">
                     <div className="flex items-center gap-x-2">
-                        <span className='w-8 h-8 bg-dark-300 flex items-center justify-center rounded-md'>2</span>
+                        <span className='w-8 h-8 bg-gray-300 dark:bg-dark-300 flex items-center justify-center rounded-md'>2</span>
                         <h1 className="line-clamp-1">چه فیچر های جدیدی رو تو پروژه دیوار یاد می‌گیریم</h1>
                     </div>
                     <div className="flex items-center gap-x-2">

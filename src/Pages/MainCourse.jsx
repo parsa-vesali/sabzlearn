@@ -24,7 +24,8 @@ import ForumIcon from '@mui/icons-material/Forum';
 import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
 import CourseInfoBox from '../Components/CourseInfoBox';
 import Accordion from '../Components/Accordion';
-
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import ArrowCircleLeftOutlinedIcon from '@mui/icons-material/ArrowCircleLeftOutlined';
 
 export default function MainCourse() {
     let params = useParams();
@@ -136,8 +137,49 @@ export default function MainCourse() {
                             <Accordion />
                         </div>
 
-                        {/* Course comments */}
+                        {/* related course */}
                         <div className="bg-white dark:bg-dark-700 rounded-xl p-4 sm:p-5 mt-8">
+                            <div className="flex items-center gap-x-2 mb-5 sm:mb-6 relative">
+                                <h2 className=' font-Dana-Bold text-2xl flex items-center gap-x-2'>
+                                    <AutoAwesomeIcon className=' text-yellow-500' style={{ fontSize: '2rem' }} />
+                                    دوره های مرتبط
+                                </h2>
+                                <span className="absolute -right-6 sm:-right-[26px] block w-1.5 h-[34px] md:h-9.5 bg-yellow-500 rounded-r-sm "></span>
+                            </div>
+                            {/* related course box */}
+                            <div className='relative rounded-lg cursor-pointer overflow-hidden transition-all mt-4 ' >
+                                {/* Accordion title */}
+                                <div className={`flex items-center justify-between  transition-colors bg-gray-100 dark:bg-dark-500 px-2 py-2 `} >
+                                    <div className="flex items-center gap-x-4">
+                                        <img className='w-24 rounded-lg' src="../images/courses/php-1.webp" alt="related course " />
+                                        <h2>معرفی دوره</h2>
+                                    </div>
+                                    <div className="flex items-center gap-x-2 child:text-sky-500">
+                                        <p>مشاهده</p>
+                                        <span>
+                                            <ArrowCircleLeftOutlinedIcon />
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='relative rounded-lg cursor-pointer overflow-hidden transition-all mt-4 ' >
+                                {/* Accordion title */}
+                                <div className={`flex items-center justify-between  transition-colors bg-gray-100 dark:bg-dark-500 px-2 py-2 `} >
+                                    <div className="flex items-center gap-x-4">
+                                        <img className='w-24 rounded-lg' src="./../images/courses/websocket.webp" alt="related course " />
+                                        <h2>معرفی دوره</h2>
+                                    </div>
+                                    <div className="flex items-center gap-x-2 child:text-sky-500">
+                                        <p>مشاهده</p>
+                                        <span>
+                                            <ArrowCircleLeftOutlinedIcon />
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {/* Course comments */}
+                        <div className="bg dark:bg-dark-700 rounded-xl p-4 sm:p-5 mt-8">
                             <div className="flex items-center gap-x-2 mb-5 sm:mb-6 relative">
                                 <h2 className=' font-Dana-Bold text-2xl flex items-center gap-x-2'>
                                     <DescriptionIcon className=' text-red-500' style={{ fontSize: '2rem' }} />
