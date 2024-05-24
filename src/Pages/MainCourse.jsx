@@ -43,7 +43,7 @@ export default function MainCourse() {
                 <Breadcrumb route1='دوره ها' route2='بک اند' route3={`${mainCourseData.title}`} />
 
                 {/* title and demo  */}
-                <div className="flex items-start flex-col-reverse gap-y-4   lg:flex-row justify-between mt-5 lg:mt-14 lg:gap-x-5 lg:h-[350px] bg-dark-700 lg:bg-transparent py-4 p-2 lg:p-0 rounded-lg">
+                <div className="flex items-start flex-col-reverse gap-y-4   lg:flex-row justify-between mt-5 lg:mt-14 lg:gap-x-5 lg:h-[350px]  lg:bg-transparent py-4 p-2 lg:p-0 rounded-lg">
 
                     <div className="flex flex-col justify-between h-full ">
                         <div className="">
@@ -105,7 +105,6 @@ export default function MainCourse() {
                             <div className="mt-10 overflow-hidden rounded-xl w-full  ">
                                 <img src="./images/courses/git.webp" className='w-full ' alt="" />
                             </div>
-
 
 
                             <div className='my-10 flex flex-col gap-y-5 child:leading-8 dark:text-zinc-300'>
