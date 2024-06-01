@@ -9,14 +9,23 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 
 import { Autoplay } from 'swiper/modules';
+import { useNavigate } from 'react-router-dom';
 
 
 export default function NewCurses() {
+    const navigate = useNavigate();
     const [allCourses, setAllCourses] = useState(Courses)
     const RandomCourses = () => {
         const shuffled = allCourses.sort(() => 0.5 - Math.random());
         return shuffled.slice(0, 8);
     }
+
+
+    const navigateToMainCourse = (CourseID) => {
+        window.scrollTo(0, 0); // Scroll to top
+        navigate(`/main-course/${CourseID}`);
+    }
+
     return (
         <>
             <Title title='جدیدترین دوره ها' subtitle='یادگیری و رشد توسعه فردی' color='bg-green-500' />
@@ -53,7 +62,6 @@ export default function NewCurses() {
                     {
                         RandomCourses().map(course => (
                             <SwiperSlide>
-
                                 <div key={course.id} className=" w-[340px] sm:w-[290px]  overflow-hidden rounded-xl bg-white dark:bg-dark-700  dark:text-gray-100 text-zinc-900 flex flex-col  shadow-lg ">
                                     {/* COURSE BANNER  */}
                                     <div className="h-42 relative rounded-xl overflow-hidden">
@@ -68,7 +76,7 @@ export default function NewCurses() {
                                     <div className="pt-3 px-4">
                                         {/* COURSE TITLE  */}
                                         <div className=" flex flex-col space-y-4  pb-2 border-b border-b-neutral-200 dark:border-b-white/5">
-                                            <h2 className='text-lg font-Dana-Bold cursor-pointer h-14 line-clamp-2'>{course.title}</h2>
+                                            <h1 onClick={() => navigateToMainCourse(course.id)} className='text-lg font-Dana-Bold cursor-pointer h-14 line-clamp-2'>{course.title}</h1>
                                             <p className='text-gray-400 line-clamp-2 text-sm'>{course.subtitle}</p>
                                             <div className="flex items-center justify-between">
                                                 <span className=' text-gray-400 dark:text-gray-200 text-sm'>

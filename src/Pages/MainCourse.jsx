@@ -1,6 +1,6 @@
 import React from 'react'
 import { Courses } from '../Constant';
-import { useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import Notifications from '../Components/Notifications'
 import NavBar from '../Components/NavBar'
 import Footer from '../Components/Footer'
@@ -30,6 +30,13 @@ import ArrowCircleLeftOutlinedIcon from '@mui/icons-material/ArrowCircleLeftOutl
 export default function MainCourse() {
     let params = useParams();
     let mainCourseData = Courses.find(course => course.id == params.CourseID)
+    const navigate = useNavigate();
+
+    const navigateToMainCourse = (CourseID) => {
+        window.scrollTo(0, 0); // Scroll to top
+        navigate(`/main-course/${CourseID}`);
+    }
+
     return (
         <>
             <div className='container py-8 bg-gray-100 dark:bg-dark-900 text-zinc-900 dark:text-gray-100'>
@@ -148,19 +155,21 @@ export default function MainCourse() {
                             </div>
                             {/* related course box */}
                             <div className='relative rounded-lg cursor-pointer overflow-hidden transition-all mt-4 ' >
-                                {/* Accordion title */}
-                                <div className={`flex items-center justify-between  transition-colors bg-gray-100 dark:bg-dark-500 px-2 py-2 `} >
-                                    <div className="flex items-center gap-x-4">
-                                        <img className='w-24 rounded-lg' src="../images/courses/php-1.webp" alt="related course " />
-                                        <h2>معرفی دوره</h2>
+
+                                <Link  onClick={() => navigateToMainCourse(1)} >
+                                    <div className={`flex items-center justify-between  transition-colors bg-gray-100 dark:bg-dark-500 px-2 py-2 `} >
+                                        <div className="flex items-center gap-x-4">
+                                            <img className='w-24 rounded-lg' src="../images/courses/php-1.webp" alt="related course " />
+                                            <h2>معرفی دوره</h2>
+                                        </div>
+                                        <div className="flex items-center gap-x-2 child:text-sky-500">
+                                            <p>مشاهده</p>
+                                            <span>
+                                                <ArrowCircleLeftOutlinedIcon />
+                                            </span>
+                                        </div>
                                     </div>
-                                    <div className="flex items-center gap-x-2 child:text-sky-500">
-                                        <p>مشاهده</p>
-                                        <span>
-                                            <ArrowCircleLeftOutlinedIcon />
-                                        </span>
-                                    </div>
-                                </div>
+                                </Link>
                             </div>
                             <div className='relative rounded-lg cursor-pointer overflow-hidden transition-all mt-4 ' >
                                 {/* Accordion title */}
