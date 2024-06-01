@@ -10,6 +10,7 @@ import Articles from '../Components/Articles'
 import PupularCurses from '../Components/PupularCurses'
 import Footer from '../Components/Footer'
 
+
 export default function Home() {
 
     return (
