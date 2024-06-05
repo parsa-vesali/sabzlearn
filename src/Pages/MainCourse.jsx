@@ -30,6 +30,7 @@ import ArrowCircleLeftOutlinedIcon from '@mui/icons-material/ArrowCircleLeftOutl
 export default function MainCourse() {
     let params = useParams();
     let mainCourseData = Courses.find(course => course.id == params.CourseID)
+    
     const navigate = useNavigate();
 
     const navigateToMainCourse = (CourseID) => {

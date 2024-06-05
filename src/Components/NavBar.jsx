@@ -26,12 +26,12 @@ export default function NavBar() {
                         <ul className='text-base xl:text-lg child:dark:text-gray-100 child-hover:text-green-500 child:transition-all flex items-center justify-center gap-x-2 xl:gap-x-4'>
                             {MenuCategory.map(item => (
                                 <li key={item.id} className='relative group'>
-                                    <a href="#" className=' '>
+                                    <Link to={`/course/${item.name}`}  href="#" className=' '>
                                         {item.name}
                                         <KeyboardArrowDownOutlinedIcon />
-                                    </a>
+                                    </Link>
                                     {/* sub menu */}
-                                    <div className='absolute shadow-lg bg-white dark:bg-dark-700 space-y-5 top-20 w-64 p-6 text-zinc-700 dark:text-gray-100 rounded-lg border-t-2 border-t-green-500 transition-all delay-75 invisible opacity-0 group-hover:top-12 group-hover:opacity-100 group-hover:visible child:transition-colors child-hover:text-green-500 flex items-start flex-col child:block child:text-base line-clamp-1'>
+                                    <div className='absolute shadow-lg bg-white dark:bg-dark-700 space-y-5 top-20 w-64 p-6 text-zinc-700 dark:text-gray-100 rounded-lg border-t-2 border-t-green-500 transition-all delay-75 invisible opacity-0 group-hover:top-12 group-hover:opacity-100 group-hover:visible child:transition-colors child-hover:text-green-500 flex items-start flex-col child:block child:text-base line-clamp-1 z-50'>
                                         {item.submenu.map(sub => (
                                             <a key={sub.id} href="#">{sub.name}</a>
                                         ))}
