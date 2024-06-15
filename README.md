@@ -1,20 +1,22 @@
-# sabzlearn 💚
-### Programming training website ... 💻
-
-In this project, I developed the website of the Sabzleran Academy with `React js`
-I made this project with `React js` and used `tailwind` next to it 
-
-link : https://my-sabzlearn.liara.run/
+# اسکای بوک 📚
+### یک فروشگاه کتاب با تمام قابلیت ها ... 💻
+این پروژه رو با `React js` توسعه دادم و از `tailwind` هم استفاده کردم.
+##قابلیت ها 
+1. سبد خرید 
+2. ورود ثبت نام 
+3. پنل ادمین
+4. 
+ادرس : https://my-sabzlearn.liara.run/
 
 <br>
 
 
-<h2>🔧 created with : </h2>
+<h2>🔧 ساخته شده با  : </h2>
 
 <p align="center">
   
   ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-  ![MUI](https://img.shields.io/badge/MUI-%230081CB.svg?style=for-the-badge&logo=mui&logoColor=white)
+
   ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
 </p>
@@ -22,6 +24,11 @@ link : https://my-sabzlearn.liara.run/
 
 ## 💻 preview :
 
-![image](https://github.com/parsa-vesali/sabzlearn/blob/main/d-1.png)
-![image](https://github.com/parsa-vesali/sabzlearn/blob/main/d-2.png)
+![image](https://github.com/parsa-vesali/skyBooks/blob/main/demo%20(1).png)
+![image](https://github.com/parsa-vesali/skyBooks/blob/main/demo%20(2).png)
+![image](https://github.com/parsa-vesali/skyBooks/blob/main/demo%20(3).png)
+![image](https://github.com/parsa-vesali/skyBooks/blob/main/demo%20(4).png)
+![image](https://github.com/parsa-vesali/skyBooks/blob/main/demo%20(5).png)
+![image](https://github.com/parsa-vesali/skyBooks/blob/main/demo%20(6).png)
+
 
